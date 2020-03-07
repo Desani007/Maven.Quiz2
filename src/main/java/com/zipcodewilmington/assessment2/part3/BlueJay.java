@@ -3,10 +3,12 @@ package com.zipcodewilmington.assessment2.part3;
 public class BlueJay extends Bird  {
     String color ;
     String motion ;
+    int speed;
 
     BlueJay(){
         this.motion="fly";
         this.color="blue";
+        this.speed=13;
 
     }
     @Override
@@ -16,7 +18,7 @@ public class BlueJay extends Bird  {
 
     @Override
     public int getSpeed() {
-        return 0;
+        return speed;
     }
 
     @Override

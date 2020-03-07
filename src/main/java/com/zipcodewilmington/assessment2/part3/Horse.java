@@ -3,10 +3,12 @@ package com.zipcodewilmington.assessment2.part3;
 public class Horse implements Animal{
     String motion;
     String color;
+    int speed;
 
     Horse(){
         this.color="brown";
         this.motion="gallop";
+        this.speed=40;
 
     }
     @Override
@@ -16,7 +18,7 @@ public class Horse implements Animal{
 
     @Override
     public int getSpeed() {
-        return 0;
+        return speed;
     }
 
     @Override

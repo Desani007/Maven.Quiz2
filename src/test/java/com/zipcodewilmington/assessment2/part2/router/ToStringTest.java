@@ -7,7 +7,7 @@ import org.junit.Test;
 public class ToStringTest {
     @Test
     public void test1() {
-        test(
+          test(
                 new Pair<>("/users", "UserController"));
     }
 
@@ -36,7 +36,7 @@ public class ToStringTest {
                 new Pair<>("/instructors", "InstructorController"));
     }
 
-    @Test
+
     public void test(Pair<String, String>... pairs) {
         // given
         StringBuilder expectedString = new StringBuilder();

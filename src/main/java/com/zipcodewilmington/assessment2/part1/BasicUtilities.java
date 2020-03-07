@@ -14,6 +14,8 @@ public class BasicUtilities {
     }
 
     public Boolean startsWith(String string, Character character) {
-         return null;
-    }
+     return Character.toLowerCase(string.charAt(0))==Character.toLowerCase(character) ;
+
+        }
+
 }

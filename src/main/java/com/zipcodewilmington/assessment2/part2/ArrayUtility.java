@@ -1,5 +1,7 @@
 package com.zipcodewilmington.assessment2.part2;
 
+import com.j256.ormlite.stmt.query.In;
+
 import java.util.Arrays;
 
 public class ArrayUtility {
@@ -33,11 +35,44 @@ public class ArrayUtility {
 
 
     public Integer[] rotate(Integer[] array, Integer index) {
-        return null;
+       String front ="";
+        String back="";
+
+        for ( int i=0;i<index;i++){
+               back+=array[i]+",";
+        }
+        for (int i=index;i<array.length;i++){
+            front +=array[i] + ",";
+        }
+        String f = front+back;
+
+        String [] result = f.split(",");
+        Integer[] intarray=new Integer[result.length];
+
+        for (int i =0 ;i<intarray.length;i++){
+            for (int j=0; j<=i;j++){
+        intarray[i]=Integer.parseInt(result[j]);
+            }
+
+        }
+        return intarray;
     }
 
     public Integer countOccurrence(Integer[] array1, Integer[] array2, Integer valueToEvaluate) {
-        return null;
+        int count=0;
+        for ( int i =0; i<array1.length;i++){
+            if (array1[i]==valueToEvaluate) {
+                count++;
+            }
+
+        }
+        for ( int i =0; i<array2.length;i++){
+            if (array2[i]==valueToEvaluate) {
+                count++;
+            }
+
+        }
+        return count;
     }
 
     public Integer mostCommon(Integer[] array) {
@@ -45,7 +80,11 @@ public class ArrayUtility {
         Integer result=0;
         for (int i=0; i<array.length; i++){
             string +=array[i];
+            if (array.length==1){
+              return Integer.parseInt(String.valueOf(string.charAt(i)));
+            }
         }  Integer count=0;
+
         for ( int i=1; i<string.length();i++){
             if (string.charAt(i)!=string.charAt(i-1))
             {
